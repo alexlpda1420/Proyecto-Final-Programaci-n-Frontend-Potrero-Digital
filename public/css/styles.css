@@ -1,0 +1,1039 @@
+/* =========================================================
+   BoxBox News - styles.css
+   Estilo: Negro/Rojo (F1 vibes)
+   Reglas: NO inline, NO inpage. CSS ordenado en cascada.
+========================================================= */
+
+/* 1) Variables / Base */
+:root {
+  --bg: #0b0b0f;
+  --panel: #12121a;
+  --panel-2: #161622;
+  --text: #e9e9ee;
+  --muted: #b9b9c7;
+  --red: #e10600;
+  --red-2: #ff2a22;
+  --border: rgba(255, 255, 255, .12);
+  --shadow: 0 12px 40px rgba(0, 0, 0, .45);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 2) Helpers / Brand */
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--red);
+  box-shadow: 0 0 0 4px rgba(225, 6, 0, .18);
+}
+
+.btn-apex {
+  background: var(--red);
+  border: 1px solid var(--red);
+  color: #fff;
+}
+
+.btn-apex:hover {
+  background: var(--red-2);
+  border-color: var(--red-2);
+}
+
+/* Input buscador */
+.search-input {
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.search-input::placeholder {
+  color: rgba(233, 233, 238, .65);
+}
+
+/* 3) Hero */
+.hero {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, .85), rgba(0, 0, 0, .35)),
+    url("../img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid var(--border);
+  padding: 64px 0;
+}
+
+.hero-inner {
+  max-width: 860px;
+}
+
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: rgba(233, 233, 238, .75);
+  margin-bottom: 10px;
+  font-size: .85rem;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  margin: 0 0 12px 0;
+}
+
+.hero-text {
+  color: rgba(233, 233, 238, .8);
+  max-width: 70ch;
+  margin-bottom: 20px;
+}
+
+/* 4) Secciones */
+.content-wrap {
+  padding: 26px 0 40px;
+}
+
+.section-block {
+  margin: 28px 0;
+}
+
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.section-subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* 5) Carousel */
+.carousel-img {
+  height: 360px;
+  object-fit: cover;
+  filter: contrast(1.05) saturate(1.1);
+}
+
+.carousel-title {
+  font-weight: 800;
+  text-shadow: 0 10px 25px rgba(0, 0, 0, .55);
+}
+
+.carousel-text {
+  color: rgba(255, 255, 255, .85);
+  max-width: 60ch;
+}
+
+/* 6) Layout 2 columnas */
+.layout-two-cols {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+/* 7) Grid noticias */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.news-card {
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform .15s ease, border-color .15s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(225, 6, 0, .55);
+}
+
+.news-img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.news-body {
+  padding: 14px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .85rem;
+  color: rgba(233, 233, 238, .88);
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.news-title {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  line-height: 1.25;
+}
+
+.news-excerpt {
+  margin: 0 0 10px 0;
+  color: var(--muted);
+}
+
+.link-strong {
+  font-weight: 700;
+  color: #fff;
+}
+
+.link-strong:hover {
+  color: var(--red-2);
+}
+
+/* 8) Sidebar panel */
+.sidebar {
+  display: grid;
+  gap: 14px;
+}
+
+.panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .03));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+
+.panel-title {
+  margin: 0 0 6px 0;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.panel-text {
+  margin: 0 0 12px 0;
+  color: var(--muted);
+}
+
+/* Radar */
+.radar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.radar-item {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px;
+  background: rgba(0, 0, 0, .22);
+}
+
+.radar-tag {
+  display: inline-block;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.radar-main {
+  display: block;
+  color: rgba(233, 233, 238, .9);
+}
+
+.radar-item.hot {
+  border-color: rgba(225, 6, 0, .55);
+}
+
+.radar-item.watch {
+  border-color: rgba(255, 255, 255, .18);
+}
+
+.radar-item.cold {
+  border-color: rgba(120, 160, 255, .25);
+}
+
+/* 9) Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 0;
+  background: #050507;
+}
+
+.footer-inner {
+  color: rgba(233, 233, 238, .78);
+}
+
+.footer-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-links a:hover {
+  color: var(--red-2);
+}
+
+/* 10) Responsive */
+@media (max-width: 992px) {
+  .layout-two-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 46px 0;
+  }
+
+  .hero-text {
+    font-size: .98rem;
+  }
+}
+
+/* ===== Pilotos & Equipos (Flexbox) ===== */
+.cards-flex {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cards-flex>.profile-card,
+.cards-flex>.team-card {
+  flex: 0 0 calc(50% - 8px);
+  /* 2 columnas exactas */
+  max-width: calc(50% - 8px);
+}
+
+
+.profile-card,
+.team-card {
+  flex: unset;
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+
+}
+
+.profile-img {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  /* no recorta */
+  background: rgba(255, 255, 255, .04);
+  display: block;
+}
+
+.profile-media {
+  height: 230px;
+  background: radial-gradient(circle at 30% 20%, rgba(225, 6, 0, .14), rgba(0, 0, 0, .35));
+  overflow: hidden;
+}
+
+
+.profile-body {
+  padding: 14px;
+}
+
+.profile-name {
+  margin: 0 0 6px 0;
+}
+
+.profile-meta {
+  margin: 0 0 10px 0;
+  color: var(--muted);
+}
+
+.profile-stats {
+  margin: 0 0 12px 0;
+  padding-left: 18px;
+  color: rgba(233, 233, 238, .9);
+}
+
+.profile-funfact {
+  margin: 0;
+  color: rgba(233, 233, 238, .85);
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: 14px;
+}
+
+.team-card {
+  padding: 14px;
+}
+
+.team-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Ajuste suave para textos secundarios con Bootstrap en fondo oscuro */
+.text-secondary {
+  color: rgba(233, 233, 238, .68) !important;
+}
+
+/* =========================
+   Footer tipo “tu captura”
+========================= */
+.footer {
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, .10);
+  background:
+    radial-gradient(1200px 260px at 20% 0%, rgba(225, 6, 0, .18), transparent 60%),
+    radial-gradient(900px 240px at 80% 0%, rgba(255, 255, 255, .06), transparent 55%),
+    linear-gradient(180deg, #07070c, #040406);
+}
+
+.footer-inner {
+  padding: 28px 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: start;
+}
+
+.footer-column h5 {
+  margin: 0 0 12px 0;
+  font-weight: 800;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, .92);
+}
+
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.footer-column a {
+  color: rgba(255, 255, 255, .78);
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgba(225, 6, 0, .9);
+}
+
+.footer-column p {
+  margin: 0;
+  color: rgba(233, 233, 238, .78);
+  line-height: 1.55;
+}
+
+.footer-column strong {
+  color: rgba(255, 255, 255, .95);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.footer-socials a {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  background: rgba(255, 255, 255, .04);
+  color: rgba(255, 255, 255, .9);
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+  text-decoration: none;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(225, 6, 0, .55);
+  background: rgba(225, 6, 0, .12);
+}
+
+.footer-socials i {
+  font-size: 1.1rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, .10);
+  padding: 14px 0;
+}
+
+.footer-bottom p {
+  margin: 0;
+  text-align: center;
+  color: rgba(233, 233, 238, .65);
+  font-size: .95rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .footer-bottom p {
+    text-align: left;
+  }
+}
+
+/* ===== Premium spacing & detalles ===== */
+.section-block {
+  margin: 34px 0;
+}
+
+.section-head {
+  margin-bottom: 16px;
+}
+
+.news-body {
+  padding: 16px;
+}
+
+.panel {
+  padding: 16px;
+}
+
+/* Accordion estilo Apex */
+.apex-accordion .accordion-item {
+  background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .03));
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.apex-accordion .accordion-button {
+  background: transparent;
+  color: rgba(255, 255, 255, .92);
+  font-weight: 800;
+}
+
+.apex-accordion .accordion-button:not(.collapsed) {
+  color: #fff;
+  box-shadow: none;
+}
+
+.apex-accordion .accordion-body {
+  color: rgba(233, 233, 238, .78);
+}
+
+/* Hover premium cards */
+.profile-card:hover,
+.team-card:hover {
+  transform: translateY(-2px);
+  transition: transform .15s ease, border-color .15s ease;
+  border-color: rgba(225, 6, 0, .55);
+}
+
+.profile-card,
+.team-card {
+  transition: transform .15s ease, border-color .15s ease;
+}
+
+/* ===== Pilotos: filtros + pill número ===== */
+.filters {
+  margin: 18px 0 22px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .03));
+}
+
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.filters-item {
+  flex: 1 1 260px;
+}
+
+.filters-item label {
+  display: block;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, .85);
+  font-weight: 700;
+}
+
+.filters-count {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(225, 6, 0, .45);
+  color: rgba(255, 255, 255, .92);
+  font-weight: 800;
+  min-width: 150px;
+  text-align: center;
+}
+
+.profile-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.num-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(225, 6, 0, .55);
+  background: rgba(225, 6, 0, .12);
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: .4px;
+  min-width: 54px;
+}
+
+
+
+@media (max-width: 992px) {
+
+  .cards-flex>.profile-card,
+  .cards-flex>.team-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* ===== Calendario (Premium) ===== */
+.bg-app {
+  background: radial-gradient(circle at 20% 10%, rgba(225, 6, 0, .18), rgba(0, 0, 0, .9) 55%), #000;
+  color: #e9e9ee;
+}
+
+.nav-glass {
+  background: rgba(10, 10, 14, .55);
+  border: 1px solid rgba(255, 255, 255, .08);
+  backdrop-filter: blur(10px);
+}
+
+.card-dark {
+  background: linear-gradient(180deg, rgba(18, 18, 24, .92), rgba(10, 10, 14, .92));
+  border: 1px solid rgba(255, 255, 255, .08);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .5);
+  border-radius: 18px;
+}
+
+.card-head-dark {
+  background: rgba(255, 255, 255, .04);
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.badge-red {
+  background: #e10600;
+  border: 1px solid rgba(255, 255, 255, .15);
+  padding: .5rem .7rem;
+  border-radius: 999px;
+}
+
+.badge-outline {
+  color: #e9e9ee;
+  border: 1px solid rgba(255, 255, 255, .18);
+  background: rgba(0, 0, 0, .25);
+  border-radius: 999px;
+  padding: .35rem .55rem;
+}
+
+.input-dark {
+  background: rgba(0, 0, 0, .35);
+  border: 1px solid rgba(255, 255, 255, .12);
+  color: #e9e9ee;
+}
+
+.input-dark::placeholder {
+  color: rgba(233, 233, 238, .55);
+}
+
+.calendar-item {
+  background: rgba(255, 255, 255, .02);
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+  color: #e9e9ee;
+  padding: 14px 14px;
+}
+
+.calendar-item:hover {
+  background: rgba(225, 6, 0, .08);
+}
+
+.calendar-item.active {
+  background: rgba(225, 6, 0, .14);
+  border-left: 4px solid #e10600;
+}
+
+.gp-map-wrap {
+  background: radial-gradient(circle at 30% 20%, rgba(225, 6, 0, .18), rgba(0, 0, 0, .45));
+  border: 1px solid rgba(255, 255, 255, .10);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.gp-map {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  display: block;
+}
+
+.mini-card {
+  background: rgba(255, 255, 255, .03);
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 16px;
+}
+
+.stats-list {
+  padding-left: 18px;
+  color: rgba(233, 233, 238, .92);
+}
+
+/* Accordion dark */
+.accordion-dark .accordion-item {
+  background: rgba(255, 255, 255, .03);
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.accordion-dark .accordion-button {
+  background: rgba(255, 255, 255, .04);
+  color: #e9e9ee;
+}
+
+.accordion-dark .accordion-button:not(.collapsed) {
+  background: rgba(225, 6, 0, .12);
+  color: #fff;
+}
+
+.accordion-dark .accordion-body {
+  color: rgba(233, 233, 238, .9);
+}
+
+/* ===== Videos: grid limpio 2x2 ===== */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.video-card {
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.video-embed {
+  aspect-ratio: 16 / 9;
+  background: rgba(0, 0, 0, .35);
+}
+
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.video-meta {
+  padding: 14px;
+}
+
+.video-title {
+  margin: 0 0 6px 0;
+  font-size: 1.05rem;
+}
+
+.video-desc {
+  margin: 0;
+  color: rgba(255, 255, 255, .78);
+}
+
+@media (max-width: 992px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   PREMIUM BASE: transiciones + focus visible
+========================================== */
+:where(a, button, input, select, textarea, .btn, .nav-link) {
+  transition: transform .15s ease, background-color .15s ease,
+    border-color .15s ease, box-shadow .15s ease, color .15s ease,
+    opacity .15s ease;
+}
+
+/* Foco visible: teclado (Tab) */
+:where(a, button, input, select, textarea, .btn):focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(225, 6, 0, .35);
+  border-color: rgba(225, 6, 0, .55);
+}
+
+/* Evitar “focus ring” molesto al click con mouse */
+:where(a, button, input, select, textarea, .btn):focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+
+/* ==========================================
+   HOVERS PREMIUM (sutiles, F1 vibes)
+========================================== */
+.news-card:hover,
+.profile-card:hover,
+.team-card:hover,
+.video-card:hover,
+.card-dark:hover {
+  transform: translateY(-3px);
+}
+
+.link-strong:hover {
+  text-decoration: none;
+  color: var(--red-2);
+}
+
+.btn-apex:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(225, 6, 0, .18);
+}
+
+.btn-apex:active {
+  transform: translateY(0px) scale(.99);
+}
+
+/* ==========================================
+   INPUTS PREMIUM
+========================================== */
+.search-input,
+.input-dark {
+  border-radius: 14px;
+}
+
+.search-input:focus-visible,
+.input-dark:focus-visible {
+  background: rgba(0, 0, 0, .35);
+}
+
+/* ==========================================
+   NAV LINKS PREMIUM
+========================================== */
+.navbar .nav-link {
+  position: relative;
+  opacity: .92;
+}
+
+.navbar .nav-link:hover {
+  opacity: 1;
+}
+
+.navbar .nav-link.active::after,
+.navbar .nav-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 6px;
+  height: 2px;
+  background: rgba(225, 6, 0, .85);
+  border-radius: 999px;
+}
+
+/* ==========================================
+   RESPONSIVE PREMIUM (ajustes finos)
+========================================== */
+
+/* Ajuste de contenedores y paddings */
+@media (max-width: 576px) {
+  .content-wrap {
+    padding: 18px 0 28px;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .section-subtitle {
+    font-size: .98rem;
+  }
+
+  /* Hero más compacto */
+  .hero {
+    padding: 44px 0;
+  }
+
+  .hero-inner {
+    padding: 0 10px;
+  }
+
+  /* Carousel */
+  .carousel-img {
+    height: 240px;
+  }
+
+  .carousel-caption {
+    padding-bottom: 16px;
+  }
+
+  /* Cards: aire */
+  .news-body {
+    padding: 14px;
+  }
+
+  .panel {
+    padding: 14px;
+  }
+
+  /* Footer: ya lo tenés responsive, esto mejora espaciado */
+  .footer-inner {
+    padding: 22px 0;
+  }
+}
+
+/* Tablet: que el grid no quede apretado */
+@media (max-width: 992px) {
+  .layout-two-cols {
+    gap: 16px;
+  }
+
+  /* Videos grid: si estás usando el grid 2 columnas */
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Calendario: que el mapa no coma tanto alto */
+  .gp-map {
+    height: 210px;
+  }
+}
+
+/* Pilotos: dos columnas solo en desktop, 1 en mobile ya lo tenés */
+@media (min-width: 993px) {
+  .profile-img {
+    height: 240px;
+  }
+
+  /* un toque más “premium” en desktop */
+}
+
+/* ===== Brand logo navbar ===== */
+.brand-logo{
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 10px 25px rgba(0,0,0,.35);
+}
+
+/* ===== Hero logo ===== */
+.hero-brand{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+/* ===== Hero: logo grande centrado + textos abajo ===== */
+.hero-brand-centered{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.hero-logo-xl{
+  width: 600px;     /* logo más grande */
+  height: 300px;
+  border-radius: 24px;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 18px 55px rgba(0,0,0,.55);
+}
+
+/* Ajustes de textos del bloque */
+.hero-brand-centered .hero-kicker{
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.78);
+  font-size: .85rem;
+}
+
+.hero-brand-centered .hero-title{
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+}
+
+.hero-sub{
+  color: rgba(255,255,255,.72);
+  font-size: .95rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+/* Responsive: que no explote en mobile */
+@media (max-width: 576px){
+  .hero-logo-xl{
+    width: 300px;
+    height: 150px;
+    border-radius: 20px;
+  }
+}
+

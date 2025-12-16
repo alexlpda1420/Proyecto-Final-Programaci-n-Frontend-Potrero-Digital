@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendario F1 2025 | BoxBoxNews</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="icon" type="image/jpeg" href="../img/logo.jpg">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-danger sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../../index.html">
+          <img src="../img/logo.jpg" alt="BoxBox News" class="brand-logo">
+          <span class="fw-bold">BoxBox News</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="mainNav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="calendario.html">Calendario</a></li>
+            <li class="nav-item"><a class="nav-link" href="./videos.html">Videos</a></li>
+            <li class="nav-item"><a class="nav-link" href="./pilotos.html">Pilotos & Equipos</a></li>
+            <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="./sobre.html">Sobre Mí</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container pb-5">
+    <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-3">
+      <div>
+        <h1 class="mb-1">Calendario F1 2025</h1>
+        <p class="mb-0">Seleccioná un GP y mirá la ficha del circuito.</p>
+      </div>
+
+      <div class="calendar-search">
+        <input id="calendarSearch" class="form-control form-control-lg input-dark" type="search"
+          placeholder="Buscar GP (ej: Japón, Monza, Brasil)..." />
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Columna izquierda: listado -->
+      <section class="col-12 col-lg-6">
+        <div class="card card-dark h-100">
+          <div class="card-header card-head-dark">
+            <strong>Grandes Premios (24 rondas)</strong>
+          </div>
+          <div class="card-body p-0">
+            <div id="calendarList" class="list-group list-group-flush"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Columna derecha: detalle -->
+      <section class="col-12 col-lg-6">
+        <div class="card card-dark h-100">
+          <div class="card-header card-head-dark d-flex justify-content-between align-items-center">
+            <div>
+              <div id="gpTitle" class="h5 mb-0">—</div>
+              <div id="gpSubtitle" class="text-muted small">—</div>
+            </div>
+            <span id="gpRound" class="badge badge-red">R—</span>
+          </div>
+
+          <div class="card-body">
+            <div class="gp-map-wrap mb-3">
+              <img id="gpMap" class="gp-map" src="" alt="Mapa del circuito" />
+            </div>
+
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="card mini-card">
+                  <div class="card-body">
+                    <h6 class="mb-2">Información del circuito</h6>
+                    <ul id="gpStats" class="mb-0 stats-list"></ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <!-- Glosario “premium” (Accordion Bootstrap) -->
+                <div class="accordion accordion-dark" id="glosario">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#g1">
+                        Glosario - F1
+                      </button>
+                    </h2>
+                    <div id="g1" class="accordion-collapse collapse" data-bs-parent="#glosario">
+                      <div class="accordion-body">
+                        <ul class="mb-0">
+                          <li><strong>DRS:</strong> sistema para reducir resistencia aerodinámica en zonas habilitadas.
+                          </li>
+                          <li><strong>Safety Car:</strong> neutraliza la carrera por incidentes/seguridad.</li>
+                          <li><strong>Parc Fermé:</strong> reglas que limitan cambios del auto tras clasificación.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-muted small mt-2 mb-0">
+                  Datos y mapas: fuentes oficiales de Formula1.com.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-column">
+        <h5>Enlaces Útiles</h5>
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="./sobre.html">Sobre Nosotros</a></li>
+          <li><a href="./pilotos.html">Pilotos & Equipos</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h5>Redes Sociales</h5>
+        <div class="footer-socials" aria-label="Redes sociales">
+          <a href="https://www.facebook.com/alexlpda1420" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://x.com/aeroldan7" target="_blank" rel="noopener noreferrer" aria-label="X"><i
+              class="bi bi-twitter-x"></i></a>
+          <a href="https://www.instagram.com/alexlpda1420/" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/alexis-esteban-roldan/" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/alexlpda1420" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+              class="bi bi-github"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h5>Contacto</h5>
+        <p>
+          Desarrollado por <strong>Alexis Roldan</strong>. Podés contactarte conmigo
+          <a href="https://github.com/alexlpda1420" target="_blank" rel="noopener noreferrer"> desde aquí</a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© Copyright - Alexis Roldan - 2025</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../js/calendario.js"></script>
+</body>
+
+</html>
