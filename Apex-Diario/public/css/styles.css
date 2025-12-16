@@ -314,3 +314,8 @@ a:hover{ text-decoration: underline; }
   gap: 10px;
   margin-bottom: 10px;
 }
+
+/* Ajuste suave para textos secundarios con Bootstrap en fondo oscuro */
+.text-secondary{
+  color: rgba(233,233,238,.68) !important;
+}
