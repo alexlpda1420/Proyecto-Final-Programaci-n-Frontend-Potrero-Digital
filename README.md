@@ -15,6 +15,16 @@ Abrí `index.html` con doble click.
 2. Instalá la extensión **Live Server**
 3. Click derecho en `index.html` → **Open with Live Server**
 
+### Opción C — GitHub Pages
+
+[Visita GitHub Pages](https://alexlpda1420.github.io/Proyecto-Final-Programaci-n-Frontend-Potrero-Digital/)
+
+
+### Opción D — Vercel
+
+[Visita Vercel](https://boxboxnews.vercel.app/)
+
+
 ---
 
 ## 🎯 Objetivos del proyecto
