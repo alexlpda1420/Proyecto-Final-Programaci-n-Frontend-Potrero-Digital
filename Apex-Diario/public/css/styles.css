@@ -263,3 +263,54 @@ a:hover{ text-decoration: underline; }
   .hero{ padding: 46px 0; }
   .hero-text{ font-size: .98rem; }
 }
+
+/* ===== Pilotos & Equipos (Flexbox) ===== */
+.cards-flex{
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.profile-card, .team-card{
+  flex: 1 1 320px;
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.profile-img{
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.profile-body{ padding: 14px; }
+
+.profile-name{ margin: 0 0 6px 0; }
+.profile-meta{ margin: 0 0 10px 0; color: var(--muted); }
+
+.profile-stats{
+  margin: 0 0 12px 0;
+  padding-left: 18px;
+  color: rgba(233,233,238,.9);
+}
+
+.profile-funfact{
+  margin: 0;
+  color: rgba(233,233,238,.85);
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: 14px;
+}
+
+.team-card{ padding: 14px; }
+.team-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
