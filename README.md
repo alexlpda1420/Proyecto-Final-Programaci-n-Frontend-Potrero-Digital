@@ -1,120 +1,188 @@
-# 🌸 Proyecto Final – Programación Frontend | Potrero Digital
+# 🏁 BoxBox News — Trabajo Final Integrador (Frontend)
 
-![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7E017?style=for-the-badge&logo=javascript&logoColor=black)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7E13F8?style=for-the-badge&logo=bootstrap&logoColor=white)
-
-## 🧩 Descripción del proyecto
-
-Este proyecto fue desarrollado como **trabajo final del curso de Programación Frontend** de **Potrero Digital**.  
-El objetivo fue crear una **interfaz web completa y responsive**, aplicando los conocimientos adquiridos sobre **HTML, CSS, JavaScript y Bootstrap**.  
-
-La temática elegida fue un sitio web de **E-commerce / Blog (según corresponda)**, con múltiples páginas, navegación clara y diseño atractivo.
+Sitio web estilo **Blog/Portal de Fórmula 1** con estética **negro/rojo** (F1 vibes), construido con **HTML + CSS + Bootstrap + JavaScript**.  
+El objetivo es presentar un proyecto **completo, navegable, responsive y “premium”**, con componentes reales (cards, carousel, accordion, grid, formularios) y páginas temáticas.
 
 ---
 
-## 📂 Estructura del proyecto
+## 🚀 Cómo ejecutar el proyecto
 
-``` yaml
+### Opción A — rápido
+Abrí `index.html` con doble click.
 
-📁 proyecto-final/
-│
-├── index.html
-├── 📁 public/
-│ ├── 📁 css/
-│ │ └── style.css
-│ ├── 📁 html/
-│ │ ├── productos.html
-│ │ ├── contacto.html
-│ │ ├── nosotros.html
-│ │ └── galeria.html
-│ └── 📁 js/
-│ └── scripts.js
-└── README.md
+### Opción B — recomendado (VS Code)
+1. Abrí la carpeta del proyecto en **VS Code**
+2. Instalá la extensión **Live Server**
+3. Click derecho en `index.html` → **Open with Live Server**
+
+---
+
+## 🎯 Objetivos del proyecto
+- Crear una web **clara y atractiva** con temática F1.
+- Aplicar buenas prácticas: **estructura por páginas**, CSS externo, componentes Bootstrap, JS separado.
+- Asegurar **responsive real** (desktop + mobile).
+- Incorporar detalles “premium”: hover, focus visible, transiciones y micro-interacciones.
+- Contenido: **Noticias**, **Calendario 2025**, **Pilotos & Equipos**, **Videos**, **Sobre mí**, **Contacto**.
+
+---
+
+## 🧩 Tecnologías usadas
+- **HTML5** (estructura semántica)
+- **CSS3** (variables, grid/flex, responsive, transiciones)
+- **Bootstrap 5.3** (layout, carousel, accordion, utilities)
+- **Bootstrap Icons** (íconos)
+- **JavaScript** (interacciones del calendario y UX)
+- **Imágenes** (hero, noticias, logo)
+
+---
+
+## 🗂️ Estructura de carpetas
+> (Puede variar levemente según tu repo, pero la idea es esta)
+
+```txt
+/
+├─ index.html
+├─ public/
+│  ├─ css/
+│  │  └─ styles.css
+│  ├─ js/
+│  │  └─ calendario.js
+│  ├─ img/
+│  │  ├─ hero.jpg
+│  │  ├─ logo.jpg
+│  │  ├─ noticia-1.jpg ... noticia-6.jpg
+│  │  └─ (pilotos y equipos)
+│  └─ html/
+│     ├─ noticias.html
+│     ├─ noticia.html
+│     ├─ noticia-drs.html
+│     ├─ noticia-safetycar.html
+│     ├─ noticia-estrategia-tv.html
+│     ├─ noticia-pitstop.html
+│     ├─ noticia-banderas.html
+│     ├─ calendario.html
+│     ├─ pilotos.html
+│     ├─ videos.html
+│     ├─ sobre.html
+│     └─ contacto.html
 ```
 
 ---
 
+## 🧠 Idea y concepto (temática)
+**BoxBox News** es un portal ficticio orientado a F1: noticias, análisis y recursos visuales para entender la categoría.  
+Se priorizó:
+- **Diseño oscuro con acento rojo**
+- Lectura rápida con **cards**
+- Contenidos conectados por navegación
+- Componentes Bootstrap para sumar “nivel entrega”
 
 ---
 
-## 🎯 Objetivos del trabajo
-
-- Diseñar un **sitio web responsive** que se adapte a PC, tablet y celular.  
-- Implementar **buenas prácticas de desarrollo web** con código prolijo e indentado.  
-- Aplicar **elementos semánticos de HTML5** (`header`, `main`, `section`, `article`, `footer`, etc.).  
-- Usar **Bootstrap** (mínimo dos componentes, por ejemplo: navbar y carrusel).  
-- Integrar **Flexbox y Grid** para estructurar el contenido.  
-- Incluir un **formulario funcional (solo la parte visual)**.  
-- Incorporar **imágenes, íconos, videos e iframes**.  
-
----
-
-## 🖥️ Tecnologías utilizadas
-
-- **HTML5** → estructura del sitio  
-- **CSS3** → estilos y diseño responsive  
-- **Bootstrap 5** → componentes visuales  
-- **Flexbox / Grid** → maquetado moderno  
-- **JavaScript** → interacción básica  
-- **GitHub Pages** → despliegue del sitio  
+## 🧭 Navegación del sitio
+- **Inicio** (`index.html`): hero + carrusel + últimas noticias
+- **Noticias**: listado y acceso a notas individuales
+- **Nota individual**: layout 2 columnas + paneles + “notas relacionadas”
+- **Calendario 2025**: listado + detalle dinámico + mapa de circuito + stats + glosario
+- **Pilotos & Equipos**: cards en 2 columnas + fichas + dato curioso
+- **Videos**: grid 2x2 de iframes
+- **Sobre mí**: info del autor + herramientas usadas
+- **Contacto**: formulario
 
 ---
 
-## 📱 Diseño Responsive
+## 🎨 Identidad visual (estilo F1)
 
-El diseño fue optimizado para funcionar correctamente en:
-- 💻 Computadoras de escritorio  
-- 📱 Teléfonos móviles  
-- 📟 Tablets  
+### Paleta (CSS variables)
+- Fondo: `--bg: #0b0b0f`
+- Panel: `--panel` / `--panel-2`
+- Texto: `--text`
+- Secundario: `--muted`
+- Primario: `--red: #e10600`
 
-Se utilizó **media queries** y **clases de Bootstrap** para garantizar la correcta visualización en todos los dispositivos.
-
----
-
-## 🧠 Buenas prácticas aplicadas
-
-- Código limpio, ordenado e indentado.  
-- Comentarios descriptivos en HTML, CSS y JS.  
-- Uso de nombres de clases coherentes y semánticos.  
-- Separación de responsabilidades (HTML / CSS / JS en archivos independientes).  
-- Control de versiones con **Git y GitHub**.  
+### Logo
+- Archivo: `public/img/logo.jpg`
+- Usos:
+  - **Hero** (centrado y grande)
+  - **Navbar** (ícono + nombre)
+  - **Favicon** (todas las páginas)
 
 ---
 
-## 🚀 Publicación
+## ⚙️ Componentes principales
 
-El sitio fue publicado mediante **GitHub Pages**, lo que permite visualizarlo online.  
-🔗 **Enlace al proyecto:** [https://usuario.github.io/proyecto-final](https://usuario.github.io/proyecto-final)
+### 1) Hero “premium”
+- Logo centrado + claim
+- Textos apilados para mejor lectura
+- Responsive con `clamp()` y media queries
+
+### 2) Carrusel (Bootstrap)
+- Slides con CTA “Leer”
+- Cada slide apunta a una **nota específica**
+- Uso de badges + captions
+
+### 3) Cards de noticias
+- Grid con `.news-grid`
+- Hover sutil + borde rojo al pasar el mouse
+- Links fuertes (`.link-strong`) para CTA
+
+### 4) Notas individuales (plantilla)
+- Layout 2 columnas (`.layout-two-cols`)
+- Artículo con imagen + secciones
+- Sidebar con paneles informativos
+- Footer consistente
+
+### 5) Calendario F1 2025 (JS)
+- Lista de rondas
+- Búsqueda por GP/circuito/ciudad
+- Panel dinámico con:
+  - **Mapa del circuito**
+  - **Datos del circuito**
+  - Accordion “Glosario” (Bootstrap)
+
+### 6) Pilotos & Equipos
+- Cards en **2 columnas**
+- Imagen arriba + datos + “dato curioso”
+- Responsive: 1 columna en pantallas chicas
+
+### 7) Videos
+- 4 iframes en grid limpio (2x2)
+- `aspect-ratio: 16/9` para mantener formato perfecto
 
 ---
 
-## 📸 Capturas del proyecto
+## 🧷 Detalles “premium” (UX/UI)
+- ✅ Hover suave en cards/botones
+- ✅ Focus visible (accesibilidad real con teclado)
+- ✅ Transiciones consistentes
+- ✅ Inputs con mejor contraste
+- ✅ Ajustes de spacing en secciones
+- ✅ `prefers-reduced-motion` para usuarios sensibles a animaciones
 
-*(Aquí puedes agregar imágenes o GIFs mostrando tu sitio en acción)*  
-Ejemplo:
+---
 
-![Preview](https://via.placeholder.com/900x400.png?text=Vista+Previa+del+Proyecto)
+## ♿ Accesibilidad (A11y) aplicada
+- `alt` en imágenes
+- `aria-label` en íconos de redes
+- `:focus-visible` para navegación con teclado
+- Contraste mejorado en textos secundarios
+
+---
+
+## ✅ Checklist final de entrega
+- [x] Sitio multipágina
+- [x] Navbar + footer consistentes
+- [x] CSS externo (sin inline)
+- [x] Bootstrap integrado (carousel + accordion + layout)
+- [x] Responsive funcionando
+- [x] JS externo (calendario)
+- [x] Imágenes y contenido coherente con enlaces correctos
+- [x] Detalles premium: hover/focus/transiciones
+- [x] Logo + favicon integrados
 
 ---
 
 ## 🧑‍💻 Autor
-
-**Nombre:** _Alexis Esteban Roldán_  
-**Curso:** _Programación Frontend – Potrero Digital_  
-**Año:** _2025_  
-📧 _alexis.roldan@hasar.com_  
-🌐 [LinkedIn](https://www.linkedin.com/in/alexis-esteban-roldan)  
-
----
-
-## 🏁 Conclusión
-
-Este proyecto representa la integración de todos los conocimientos aprendidos durante el curso, aplicados en un entorno práctico, estético y funcional.  
-💪 _“Aprender haciendo, crear creciendo.”_
-
----
-
-> **Nota:** No se utilizaron plantillas ni contenido automático. Todo el código fue desarrollado íntegramente por el autor siguiendo los lineamientos del curso.
-
+**Alexis Roldan**  
+Proyecto académico — Programación Web Frontend  
+© 2025
