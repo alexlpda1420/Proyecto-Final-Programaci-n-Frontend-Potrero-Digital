@@ -271,20 +271,36 @@ a:hover{ text-decoration: underline; }
   flex-wrap: wrap;
 }
 
+.cards-flex > .profile-card,
+.cards-flex > .team-card{
+  flex: 0 0 calc(50% - 8px);  /* 2 columnas exactas */
+  max-width: calc(50% - 8px);
+}
+
+
 .profile-card, .team-card{
-  flex: 1 1 320px;
+  flex: unset;
   background: linear-gradient(180deg, var(--panel), var(--panel-2));
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
+
 }
 
 .profile-img{
   width: 100%;
-  height: 190px;
-  object-fit: cover;
+  height: 230px;
+  object-fit: contain;        /* no recorta */
+  background: rgba(255,255,255,.04);
+  display: block;
 }
+.profile-media{
+  height: 230px;
+  background: radial-gradient(circle at 30% 20%, rgba(225,6,0,.14), rgba(0,0,0,.35));
+  overflow: hidden;
+}
+
 
 .profile-body{ padding: 14px; }
 
@@ -477,4 +493,73 @@ a:hover{ text-decoration: underline; }
 }
 .profile-card, .team-card{
   transition: transform .15s ease, border-color .15s ease;
+}
+
+/* ===== Pilotos: filtros + pill número ===== */
+.filters{
+  margin: 18px 0 22px;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+}
+
+.filters-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.filters-item{
+  flex: 1 1 260px;
+}
+
+.filters-item label{
+  display:block;
+  margin-bottom: 6px;
+  color: rgba(255,255,255,.85);
+  font-weight: 700;
+}
+
+.filters-count{
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(225,6,0,.45);
+  color: rgba(255,255,255,.92);
+  font-weight: 800;
+  min-width: 150px;
+  text-align: center;
+}
+
+.profile-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+}
+
+.num-pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(225,6,0,.55);
+  background: rgba(225,6,0,.12);
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: .4px;
+  min-width: 54px;
+}
+
+
+
+@media (max-width: 992px){
+  .cards-flex > .profile-card,
+  .cards-flex > .team-card{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
