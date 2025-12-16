@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Diario | Pilotos & Equipos</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-danger sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../../index.html">
+          <span class="brand-dot"></span><span class="fw-bold">Apex Diario</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="mainNav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./calendario.html">Calendario</a></li>
+            <li class="nav-item"><a class="nav-link" href="./videos.html">Videos</a></li>
+            <li class="nav-item"><a class="nav-link active" href="./pilotos.html">Pilotos & Equipos</a></li>
+            <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container content-wrap">
+    <header class="section-head">
+      <h1 class="section-title">Pilotos & Equipos</h1>
+      <p class="section-subtitle">Fichas rápidas con enfoque “qué aporta cada uno” y un dato curioso.</p>
+    </header>
+
+    <!-- PILOTOS (Flexbox) -->
+    <section class="section-block">
+      <h2 class="section-title">Pilotos destacados (modo scouting)</h2>
+
+      <div class="cards-flex">
+        <article class="profile-card">
+          <img src="../img/piloto-1.jpg" alt="Foto de piloto (colocá una imagen libre)" class="profile-img">
+          <div class="profile-body">
+            <h3 class="profile-name">Piloto A</h3>
+            <p class="profile-meta"><i class="bi bi-people"></i> Equipo: Escudería Rojo Negro</p>
+
+            <ul class="profile-stats">
+              <li><strong>Fortaleza:</strong> gestión de neumáticos</li>
+              <li><strong>Estilo:</strong> consistente en stints largos</li>
+              <li><strong>Mejor escenario:</strong> carrera con degradación</li>
+            </ul>
+
+            <p class="profile-funfact">
+              <span class="badge text-bg-danger">Dato curioso</span><br>
+              Usa referencias visuales en frenada para “clavar” el mismo punto vuelta tras vuelta.
+            </p>
+          </div>
+        </article>
+
+        <article class="profile-card">
+          <img src="../img/piloto-2.jpg" alt="Foto de piloto (colocá una imagen libre)" class="profile-img">
+          <div class="profile-body">
+            <h3 class="profile-name">Piloto B</h3>
+            <p class="profile-meta"><i class="bi bi-people"></i> Equipo: Team Apex</p>
+
+            <ul class="profile-stats">
+              <li><strong>Fortaleza:</strong> una vuelta (qualy)</li>
+              <li><strong>Estilo:</strong> agresivo pero calculado</li>
+              <li><strong>Mejor escenario:</strong> pista limpia y ritmo alto</li>
+            </ul>
+
+            <p class="profile-funfact">
+              <span class="badge text-bg-danger">Dato curioso</span><br>
+              Ajusta el “plan” mental por curva: una mini estrategia dentro de la estrategia.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EQUIPOS (Flexbox) -->
+    <section class="section-block">
+      <h2 class="section-title">Equipos (radiografía rápida)</h2>
+
+      <div class="cards-flex">
+        <article class="team-card">
+          <div class="team-head">
+            <h3 class="mb-0">Escudería Rojo Negro</h3>
+            <span class="badge text-bg-success">🟢 Forma</span>
+          </div>
+          <p class="text-secondary mb-2">Fortaleza: estrategia consistente y paradas limpias.</p>
+          <ul class="mb-0">
+            <li><strong>Mejor en:</strong> ritmo de carrera</li>
+            <li><strong>Riesgo:</strong> tráfico al salir de boxes</li>
+          </ul>
+        </article>
+
+        <article class="team-card">
+          <div class="team-head">
+            <h3 class="mb-0">Team Apex</h3>
+            <span class="badge text-bg-warning">🟡 Forma</span>
+          </div>
+          <p class="text-secondary mb-2">Fortaleza: velocidad a una vuelta.</p>
+          <ul class="mb-0">
+            <li><strong>Mejor en:</strong> clasificación</li>
+            <li><strong>Riesgo:</strong> degradación en stints largos</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="mb-0"><strong>Apex Diario</strong> · Pilotos & Equipos</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
