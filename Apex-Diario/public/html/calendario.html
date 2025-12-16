@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apex Diario | Calendario</title>
+   <title>Calendario F1 2025 | ApexNews</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -24,7 +24,7 @@
         <div id="mainNav" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto gap-lg-2">
             <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link active" href="./calendario.html">Calendario</a></li>
+            <li class="nav-item"><a class="nav-link active" href="calendario.html">Calendario</a></li>
             <li class="nav-item"><a class="nav-link" href="./videos.html">Videos</a></li>
             <li class="nav-item"><a class="nav-link" href="./pilotos.html">Pilotos & Equipos</a></li>
             <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
@@ -36,61 +36,87 @@
     </nav>
   </header>
 
-  <main class="container content-wrap">
-    <header class="section-head">
-      <h1 class="section-title">Calendario (selección educativa)</h1>
-      <p class="section-subtitle">No depende del año: es para practicar secciones, cards y estados visuales.</p>
-    </header>
+  <main class="container pb-5">
+    <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-3">
+      <div>
+        <h1 class="mb-1">Calendario F1 2025</h1>
+        <p class="mb-0">Seleccioná un GP y mirá la ficha del circuito.</p>
+      </div>
 
-    <section class="row g-3">
-      <article class="col-12 col-md-6 col-lg-4">
-        <div class="panel h-100">
-          <h2 class="h5 mb-1">GP de Australia</h2>
-          <p class="text-secondary mb-2">Circuito: Albert Park · Mes típico: Marzo</p>
-          <span class="badge text-bg-warning">🟡 Próximo</span>
-        </div>
-      </article>
+      <div class="calendar-search">
+        <input id="calendarSearch" class="form-control form-control-lg input-dark"
+               type="search" placeholder="Buscar GP (ej: Japón, Monza, Brasil)..." />
+      </div>
+    </div>
 
-      <article class="col-12 col-md-6 col-lg-4">
-        <div class="panel h-100">
-          <h2 class="h5 mb-1">GP de Mónaco</h2>
-          <p class="text-secondary mb-2">Circuito urbano · Mes típico: Mayo</p>
-          <span class="badge text-bg-info">🔵 Por venir</span>
+    <div class="row g-4">
+      <!-- Columna izquierda: listado -->
+      <section class="col-12 col-lg-6">
+        <div class="card card-dark h-100">
+          <div class="card-header card-head-dark">
+            <strong>Grandes Premios (24 rondas)</strong>
+          </div>
+          <div class="card-body p-0">
+            <div id="calendarList" class="list-group list-group-flush"></div>
+          </div>
         </div>
-      </article>
+      </section>
 
-      <article class="col-12 col-md-6 col-lg-4">
-        <div class="panel h-100">
-          <h2 class="h5 mb-1">GP de Italia</h2>
-          <p class="text-secondary mb-2">Circuito: Monza · Mes típico: Septiembre</p>
-          <span class="badge text-bg-info">🔵 Por venir</span>
-        </div>
-      </article>
+      <!-- Columna derecha: detalle -->
+      <section class="col-12 col-lg-6">
+        <div class="card card-dark h-100">
+          <div class="card-header card-head-dark d-flex justify-content-between align-items-center">
+            <div>
+              <div id="gpTitle" class="h5 mb-0">—</div>
+              <div id="gpSubtitle" class="text-muted small">—</div>
+            </div>
+            <span id="gpRound" class="badge badge-red">R—</span>
+          </div>
 
-      <article class="col-12 col-md-6 col-lg-4">
-        <div class="panel h-100">
-          <h2 class="h5 mb-1">GP de Bélgica</h2>
-          <p class="text-secondary mb-2">Circuito: Spa-Francorchamps · Mes típico: Julio</p>
-          <span class="badge text-bg-info">🔵 Por venir</span>
-        </div>
-      </article>
+          <div class="card-body">
+            <div class="gp-map-wrap mb-3">
+              <img id="gpMap" class="gp-map" src="" alt="Mapa del circuito" />
+            </div>
 
-      <article class="col-12 col-md-6 col-lg-4">
-        <div class="panel h-100">
-          <h2 class="h5 mb-1">GP de Japón</h2>
-          <p class="text-secondary mb-2">Circuito: Suzuka · Mes típico: Octubre</p>
-          <span class="badge text-bg-info">🔵 Por venir</span>
-        </div>
-      </article>
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="card mini-card">
+                  <div class="card-body">
+                    <h6 class="mb-2">Información del circuito</h6>
+                    <ul id="gpStats" class="mb-0 stats-list"></ul>
+                  </div>
+                </div>
+              </div>
 
-      <article class="col-12 col-md-6 col-lg-4">
-        <div class="panel h-100">
-          <h2 class="h5 mb-1">GP de Abu Dhabi</h2>
-          <p class="text-secondary mb-2">Yas Marina · Mes típico: Diciembre</p>
-          <span class="badge text-bg-info">🔵 Por venir</span>
+              <div class="col-12">
+                <!-- Glosario “premium” (Accordion Bootstrap) -->
+                <div class="accordion accordion-dark" id="glosario">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g1">
+                        Glosario - F1
+                      </button>
+                    </h2>
+                    <div id="g1" class="accordion-collapse collapse" data-bs-parent="#glosario">
+                      <div class="accordion-body">
+                        <ul class="mb-0">
+                          <li><strong>DRS:</strong> sistema para reducir resistencia aerodinámica en zonas habilitadas.</li>
+                          <li><strong>Safety Car:</strong> neutraliza la carrera por incidentes/seguridad.</li>
+                          <li><strong>Parc Fermé:</strong> reglas que limitan cambios del auto tras clasificación.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-muted small mt-2 mb-0">
+                  Datos y mapas: fuentes oficiales de Formula1.com.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </article>
-    </section>
+      </section>
+    </div>
   </main>
 
   <footer class="footer">
@@ -134,5 +160,6 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../js/calendario.js"></script>
 </body>
 </html>

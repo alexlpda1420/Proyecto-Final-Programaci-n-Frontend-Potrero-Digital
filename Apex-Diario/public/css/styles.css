@@ -563,3 +563,103 @@ a:hover{ text-decoration: underline; }
     max-width: 100%;
   }
 }
+
+/* ===== Calendario (Premium) ===== */
+.bg-app { background: radial-gradient(circle at 20% 10%, rgba(225,6,0,.18), rgba(0,0,0,.9) 55%), #000; color: #e9e9ee; }
+
+.nav-glass{
+  background: rgba(10,10,14,.55);
+  border: 1px solid rgba(255,255,255,.08);
+  backdrop-filter: blur(10px);
+}
+
+.card-dark{
+  background: linear-gradient(180deg, rgba(18,18,24,.92), rgba(10,10,14,.92));
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 14px 40px rgba(0,0,0,.5);
+  border-radius: 18px;
+}
+
+.card-head-dark{
+  background: rgba(255,255,255,.04);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.badge-red{
+  background: #e10600;
+  border: 1px solid rgba(255,255,255,.15);
+  padding: .5rem .7rem;
+  border-radius: 999px;
+}
+
+.badge-outline{
+  color: #e9e9ee;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(0,0,0,.25);
+  border-radius: 999px;
+  padding: .35rem .55rem;
+}
+
+.input-dark{
+  background: rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.12);
+  color: #e9e9ee;
+}
+.input-dark::placeholder{ color: rgba(233,233,238,.55); }
+
+.calendar-item{
+  background: rgba(255,255,255,.02);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  color: #e9e9ee;
+  padding: 14px 14px;
+}
+.calendar-item:hover{ background: rgba(225,6,0,.08); }
+.calendar-item.active{
+  background: rgba(225,6,0,.14);
+  border-left: 4px solid #e10600;
+}
+
+.gp-map-wrap{
+  background: radial-gradient(circle at 30% 20%, rgba(225,6,0,.18), rgba(0,0,0,.45));
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  padding: 12px;
+}
+.gp-map{
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  display: block;
+}
+
+.mini-card{
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+}
+.stats-list{
+  padding-left: 18px;
+  color: rgba(233,233,238,.92);
+}
+
+/* Accordion dark */
+.accordion-dark .accordion-item{
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.accordion-dark .accordion-button{
+  background: rgba(255,255,255,.04);
+  color: #e9e9ee;
+}
+.accordion-dark .accordion-button:not(.collapsed){
+  background: rgba(225,6,0,.12);
+  color: #fff;
+}
+.accordion-dark .accordion-body{
+  color: rgba(233,233,238,.9);
+}
+
+
+
