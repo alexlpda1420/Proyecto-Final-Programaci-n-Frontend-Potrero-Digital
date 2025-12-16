@@ -427,3 +427,54 @@ a:hover{ text-decoration: underline; }
   }
   .footer-bottom p{ text-align: left; }
 }
+
+/* ===== Premium spacing & detalles ===== */
+.section-block{
+  margin: 34px 0;
+}
+
+.section-head{
+  margin-bottom: 16px;
+}
+
+.news-body{
+  padding: 16px;
+}
+
+.panel{
+  padding: 16px;
+}
+
+/* Accordion estilo Apex */
+.apex-accordion .accordion-item{
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.apex-accordion .accordion-button{
+  background: transparent;
+  color: rgba(255,255,255,.92);
+  font-weight: 800;
+}
+
+.apex-accordion .accordion-button:not(.collapsed){
+  color: #fff;
+  box-shadow: none;
+}
+
+.apex-accordion .accordion-body{
+  color: rgba(233,233,238,.78);
+}
+
+/* Hover premium cards */
+.profile-card:hover, .team-card:hover{
+  transform: translateY(-2px);
+  transition: transform .15s ease, border-color .15s ease;
+  border-color: rgba(225,6,0,.55);
+}
+.profile-card, .team-card{
+  transition: transform .15s ease, border-color .15s ease;
+}
