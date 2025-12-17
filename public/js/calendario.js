@@ -52,7 +52,7 @@ function renderList(items) {
       <div class="d-flex justify-content-between align-items-start gap-2">
         <div class="pe-2">
           <div class="fw-semibold">R${item.round} · ${item.gp}</div>
-          <div class="small text-muted">${item.city} · ${item.circuit}</div>
+          <div class="small">${item.city} · ${item.circuit}</div>
         </div>
         <div class="text-end">
           <div class="badge badge-outline">${item.date}</div>
