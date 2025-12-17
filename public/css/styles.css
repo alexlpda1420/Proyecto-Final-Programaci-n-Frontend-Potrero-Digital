@@ -284,28 +284,7 @@ a:hover {
   border-color: rgba(120, 160, 255, .25);
 }
 
-/* 9) Footer */
-.site-footer {
-  border-top: 1px solid var(--border);
-  padding: 20px 0;
-  background: #050507;
-}
-
-.footer-inner {
-  color: rgba(233, 233, 238, .78);
-}
-
-.footer-links {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.footer-links a:hover {
-  color: var(--red-2);
-}
-
-/* 10) Responsive */
+/* 9) Responsive */
 @media (max-width: 992px) {
   .layout-two-cols {
     grid-template-columns: 1fr;
@@ -418,7 +397,7 @@ a:hover {
 }
 
 /* =========================
-   Footer tipo “tu captura”
+           FOOTER
 ========================= */
 .footer {
   margin-top: 40px;
@@ -528,7 +507,7 @@ a:hover {
   }
 }
 
-/* ===== Premium spacing & detalles ===== */
+/* ===== spacing & detalles ===== */
 .section-block {
   margin: 34px 0;
 }
@@ -545,7 +524,7 @@ a:hover {
   padding: 16px;
 }
 
-/* Accordion estilo Apex */
+/* Accordion */
 .apex-accordion .accordion-item {
   background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .03));
   border: 1px solid rgba(255, 255, 255, .12);
@@ -569,7 +548,7 @@ a:hover {
   color: rgba(233, 233, 238, .78);
 }
 
-/* Hover premium cards */
+/* Hover cards */
 .profile-card:hover,
 .team-card:hover {
   transform: translateY(-2px);
@@ -652,7 +631,7 @@ a:hover {
   }
 }
 
-/* ===== Calendario (Premium) ===== */
+/* ===== Calendario ===== */
 .bg-app {
   background: radial-gradient(circle at 20% 10%, rgba(225, 6, 0, .18), rgba(0, 0, 0, .9) 55%), #000;
   color: #e9e9ee;
@@ -815,7 +794,7 @@ a:hover {
 }
 
 /* ==========================================
-   PREMIUM BASE: transiciones + focus visible
+       transiciones + focus visible
 ========================================== */
 :where(a, button, input, select, textarea, .btn, .nav-link) {
   transition: transform .15s ease, background-color .15s ease,
@@ -837,7 +816,7 @@ a:hover {
 
 
 /* ==========================================
-   HOVERS PREMIUM (sutiles, F1 vibes)
+       HOVERS (sutiles, F1 vibes)
 ========================================== */
 .news-card:hover,
 .profile-card:hover,
@@ -862,7 +841,7 @@ a:hover {
 }
 
 /* ==========================================
-   INPUTS PREMIUM
+   INPUTS
 ========================================== */
 .search-input,
 .input-dark {
@@ -875,7 +854,7 @@ a:hover {
 }
 
 /* ==========================================
-   NAV LINKS PREMIUM
+   NAV LINKS
 ========================================== */
 .navbar .nav-link {
   position: relative;
@@ -899,7 +878,7 @@ a:hover {
 }
 
 /* ==========================================
-   RESPONSIVE PREMIUM (ajustes finos)
+   RESPONSIVE 
 ========================================== */
 
 /* Ajuste de contenedores y paddings */
@@ -955,7 +934,7 @@ a:hover {
     gap: 16px;
   }
 
-  /* Videos grid: si estás usando el grid 2 columnas */
+  /* Videos grid: grid 2 columnas */
   .video-grid {
     grid-template-columns: 1fr;
   }
@@ -966,13 +945,13 @@ a:hover {
   }
 }
 
-/* Pilotos: dos columnas solo en desktop, 1 en mobile ya lo tenés */
+/* Pilotos: dos columnas solo en desktop, 1 en mobile */
 @media (min-width: 993px) {
   .profile-img {
     height: 240px;
   }
 
-  /* un toque más “premium” en desktop */
+
 }
 
 /* ===== Brand logo navbar ===== */
@@ -1031,7 +1010,7 @@ a:hover {
   letter-spacing: .08em;
 }
 
-/* Responsive: que no explote en mobile */
+/* Responsive mobile */
 @media (max-width: 576px){
   .hero-logo-xl{
     width: 300px;
